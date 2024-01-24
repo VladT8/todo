@@ -1,0 +1,36 @@
+// todoForm.scss
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  .form__input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+
+    &:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+  }
+
+  .form__button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #2ecc71;
+    color: #fff;
+    border: 1px solid #2ecc71;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #27ae60;
+      border-color: #27ae60;
+    }
+  }
+}

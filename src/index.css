@@ -40,7 +40,9 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: Roboto;
+  font-family: "arial";
+  color: white;
+  background-color: #112d49;
 }
 
 input,

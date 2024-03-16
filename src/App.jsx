@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { AppTitle } from "./components/ui/appName/appTitle";
 import { TodoForm } from "./components/ui/todoForm/todoForm";
 import { TodoList } from "./components/ui/todoList/todoList";
+import { TodoActions } from "./components/ui/todoActions/todoActions";
 import "./App.css";
 
 function App() {
@@ -31,10 +32,22 @@ function App() {
     );
   };
 
+  const reseteTodoHandler = () => {
+    setTodos([]);
+  };
+
+  const deleteCompletedTodoHandler = () => {
+    setTodos(todos.filter((todo) => !todo.isCompleted));
+  };
+
   return (
     <div className="App">
       <AppTitle />
       <TodoForm addTodo={addTodoHandler} />
+      <TodoActions
+        reset={reseteTodoHandler}
+        deleteComplited={deleteCompletedTodoHandler}
+      />
       <TodoList
         todos={todos}
         deleteTodo={deleteTodoHandler}

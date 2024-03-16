@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "../../shared/button/button";
 import "./todoForm.scss";
 
 export const TodoForm = ({ addTodo }) => {
@@ -16,7 +17,7 @@ export const TodoForm = ({ addTodo }) => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button className="form__button">Add</button>
+      <Button type="submit" className="form__button">Add</Button>
     </form>
   );
 };
